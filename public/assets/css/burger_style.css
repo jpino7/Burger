@@ -1,0 +1,40 @@
+/* Body and HTML Style */
+body {
+    background-image: url("/assets/img/burger-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Shadows Into Light'; 
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  /* Style the navigation menu */
+  .navbar, h3, h4 {
+    color:  #A52A2A;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+  }
+
+  .card-header {
+      background-color: #FFBF00;
+  }
+    
+  /* Footer Style */
+  footer {
+    position: fixed;
+    left: 0;
+    top: 10;
+    bottom: 0;
+    width: 100%;
+    color:  #A52A2A;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+  }
