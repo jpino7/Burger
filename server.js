@@ -23,7 +23,7 @@ connection.connect(err => {
         console.log(err);
     } else {
         app.listen(PORT, () => {
-            console.log(`App listening on port ${PORT}`);
+            console.log("Server listening on: http://localhost:" + PORT);
         });
     }
 });
