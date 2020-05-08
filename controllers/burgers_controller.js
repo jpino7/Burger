@@ -11,7 +11,7 @@ routes.get("/", function (req, res) {
             devouredList: devoured
         });
     }).catch((err) => {
-        res.status(500).send({error: err});
+        res.status(500).send({ error: err });
     });
 });
 
@@ -19,19 +19,24 @@ routes.get("/api/burger", (req, res) => {
     burger.selectBurgers().then((err, result) => {
         res.send(result);
     }).catch((err) => {
-        res.status(500).send({error: err});
+        res.status(500).send({ error: err });
     });
 });
 
 routes.post("/api/burger", (req, res) => {
     if (!req.body.name) {
-        res.status(500).send({error: "Burger name is Required"});
+        res.status(500).send({ error: "Burger name is Required" });
     }
-    let newBurger = new Burger(req.body.name);
+
+    let newBurger = {
+        name: req.body.name,
+        devoured: false
+    };
+
     burger.create(newBurger).then(id => {
         res.json(id);
     }).catch((err) => {
-        res.status(500).send({error: err});
+        res.status(500).send({ error: err });
     });
 });
 
@@ -39,7 +44,7 @@ routes.put("/api/burger/:id", (req, res) => {
     burger.updateDevoured(req.params.id).then(result => {
         res.json(result);
     }).catch((err) => {
-        res.status(500).send({error: err});
+        res.status(500).send({ error: err });
     });
 });
 

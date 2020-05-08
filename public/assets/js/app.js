@@ -14,7 +14,7 @@ $(".devour-btn").on("click", function () {
     devourBurger(id);
 });
 
-$("#addBurger").on("submit", function (event) {
+$("#addBurger").on("click", function (event) {
     event.preventDefault();
     const data = {
         name: $("#burgerName").val()
